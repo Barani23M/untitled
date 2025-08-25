@@ -1,0 +1,130 @@
+import 'package:flutter/material.dart';
+
+void main() {
+1 St
+   List<int> arr = [7, 18, 45, -6, 19, -1, 0];
+     int negativeCount = 0;
+
+     for (int num in arr) {
+       if (num < 0) {
+         negativeCount++;
+      }
+    }
+
+    print(': negativeCount');
+   }
+//2..
+// //void main() {
+//   String str = "flesruoYevileB";
+//   String reversed = "";
+
+//   for (int i = str.length - 1; i >= 0; i--) {
+//     reversed += str[i];
+//   }
+
+//   print("Original String: $str");
+//   print("Reversed String: $reversed");
+// }
+
+//3.int sumOfDigits(int num) {
+//   int sum = 0;
+//   while (num > 0) {
+//     sum += num % 10; 
+//     num ~/= 10; 
+//   }
+//   return sum;
+// }
+
+// void main() {
+//   int num = 641108;
+//   print("Sum of digits in $num is ${sumOfDigits(num)}");
+// }
+//4.r
+// void main() {
+//   List<int> numbers = [10, 9, 3, 4, 5, 6, 7, 13];
+//   int result = sumOfLargestTwo(numbers);
+//   print("Input List: $numbers");
+//   print("Sum of largest and second largest unique numbers: $result");
+// }
+// int sumOfLargestTwo(List<int> nums) {
+//   nums = nums.toSet().toList();  
+//   nums.sort((a, b) => b.compareTo(a));
+
+//   int largest = nums[0];
+//   int secondLargest = nums[1];
+// return largest + secondLargest;
+// }
+
+
+
+//6..
+// void main() {
+//   List<int> numbers = [1, 2, 3, 5, 6]; 
+
+//   int n = numbers.length + 1; 
+//   int missing = -1;
+
+//   for (int i = 1; i <= n; i++) {
+//     if (!numbers.contains(i)) {
+//       missing = i;
+//       break;
+//     }
+//   }
+
+//   print("Missing Number: $missing");
+// }
+
+// //H
+// void main() {
+//   List<int> arr = [3, 34, 4, 12, 5, 2];
+//   int sum = 9;
+
+//   bool result = isSubsetSum(arr, sum);
+
+//   print("Array: $arr");
+//   print("Sum: $sum");
+//   print("Is Subset Sum Possible? $result");
+// }
+
+// bool isSubsetSum(List<int> arr, int sum) {
+//   int n = arr.length;
+//   List<List<bool>> dp = List.generate(
+//       n + 1, () => List.generate(sum + 1, () => false));
+//   for (int i = 0; i <= n; i++) {
+//     dp[i][0] = true;
+//   }
+
+//   // Fill DP table
+//   for (int i = 1; i <= n; i++) {
+//     for (int j = 1; j <= sum; j++) {
+//       if (arr[i - 1] > j) {
+//         dp[i][j] = dp[i - 1][j];
+//       } else {
+//         dp[i][j] = dp[i - 1][j] || dp[i - 1][j - arr[i - 1]];
+//       }
+//     }
+//   }
+
+//   return dp[n][sum];
+// }
+
+//E
+// List<int> removeDuplicates(List<int> arr) {
+//   List<int> uniqueList = [];
+
+//   for (int element in arr) {
+//     if (!uniqueList.contains(element)) {
+//       uniqueList.add(element);
+//     }
+//   }
+
+//   return uniqueList;
+// }
+
+// void main() {
+//   List<int> arr = [1, 2, 2, 3, 4, 4, 5];
+//   print("Original List: $arr");
+
+//   List<int> result = removeDuplicates(arr);
+//   print("List without duplicates: $result");
+// }
